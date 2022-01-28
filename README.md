@@ -30,10 +30,10 @@ You can choose between the following models:
 Please cite our paper if you use this code in your own work:
 
 ```
-@article{kipf2016variational,
-  title={Variational Graph Auto-Encoders},
-  author={Kipf, Thomas N and Welling, Max},
-  journal={NIPS Workshop on Bayesian Deep Learning},
-  year={2016}
+@article{},
+  title={},
+  author={},
+  journal={},
+  year={}
 }
 ```
