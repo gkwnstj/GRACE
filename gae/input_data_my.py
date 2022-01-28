@@ -14,23 +14,13 @@ import seaborn as sns
 import numpy as np
 from sklearn.cluster import KMeans  # model
 from itertools import combinations
-##import networkx as nx
+import networkx as nx
 import copy
 from networkx.algorithms import community
 import matplotlib.animation as animation
-from sklearn.cluster import AgglomerativeClustering
-from sklearn.cluster import SpectralClustering
-from sklearn.metrics.cluster import adjusted_rand_score
 from sklearn.manifold import TSNE
-import time
-from sklearn.metrics.cluster import normalized_mutual_info_score
-from sklearn.metrics import jaccard_score
-from sklearn import svm, datasets
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import plot_confusion_matrix
 import umap
 
-import torch
 
 #######
 
