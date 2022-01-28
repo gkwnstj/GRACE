@@ -15,6 +15,15 @@ python setup.py install
 * pip install umap-learn
 
 
+## Data
+
+Set the root. Have a look at the `my_data(data_file)` function in `input_data_my.py`
+
+'file = pd.read_csv('.../my_data/{}.txt'.format(data_file), sep='\t')'
+'file_label = pd.read_csv('.../my_data/{}_label.txt'.format(data_file), names=['order', 'target'], sep='\t')'
+
+
+
 ## Run the demo
 
 ```bash
