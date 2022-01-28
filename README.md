@@ -19,10 +19,10 @@ python setup.py install
 
 Set the root. Have a look at the `my_data(data_file)` function in `input_data_my.py`
 ```
-file = pd.read_csv('.../my_data/{}.txt'.format(data_file), sep='\t')
+file = pd.read_csv('.../{}.txt'.format(data_file), sep='\t')
 ```
 ```
-file_label = pd.read_csv('.../my_data/{}_label.txt'.format(data_file), names=['order', 'target'], sep='\t')
+file_label = pd.read_csv('.../{}_label.txt'.format(data_file), names=['order', 'target'], sep='\t')
 ```
 Describe the dataset names. Have a look at the names=[''] code (line 120) in 'GRACE.py' (You can examine the multiple datasets)
 ```
