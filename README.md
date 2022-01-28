@@ -4,12 +4,16 @@
 python setup.py install
 ```
 
-## Requirements
+## Requirements (automatically installed by python setup.py install)
 * TensorFlow (1.0 or later)
 * python 2.7
 * networkx
 * scikit-learn
 * scipy
+
+## Extra Requirements
+* pip install umap-learn
+
 
 ## Run the demo
 
