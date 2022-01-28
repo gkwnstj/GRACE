@@ -6,7 +6,7 @@ python setup.py install
 
 ## Requirements (automatically installed by python setup.py install)
 * TensorFlow (1.0 or later)
-* python 2.7
+* python 3.8.12
 * networkx
 * scikit-learn
 * scipy
