@@ -4,7 +4,7 @@
 python setup.py install
 ```
 
-## Requirements (automatically installed by python setup.py install)
+## Requirements (automatically installed by installation)
 * TensorFlow (1.0 or later)
 * python 3.8.12
 * networkx
