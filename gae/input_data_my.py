@@ -81,8 +81,8 @@ def my_data(data_file):
 
 
 
-    file = pd.read_csv('D:/FINAL_AUTO_PROJECT/my_data/{}.txt'.format(data_file), sep='\t')
-    file_label = pd.read_csv('D:/FINAL_AUTO_PROJECT/my_data/{}_label.txt'.format(data_file), names=['order', 'target'], sep='\t')
+    file = pd.read_csv('.../{}.txt'.format(data_file), sep='\t')
+    file_label = pd.read_csv('.../{}_label.txt'.format(data_file), names=['order', 'target'], sep='\t')
 
 
 
