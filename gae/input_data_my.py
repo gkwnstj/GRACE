@@ -13,6 +13,7 @@ from matplotlib.colors import ListedColormap
 import seaborn as sns
 import numpy as np
 from sklearn.cluster import KMeans  # model
+from sklearn.cluster import AgglomerativeClustering
 from itertools import combinations
 import networkx as nx
 import copy
@@ -20,6 +21,7 @@ from networkx.algorithms import community
 import matplotlib.animation as animation
 from sklearn.manifold import TSNE
 import umap
+
 
 
 #######
