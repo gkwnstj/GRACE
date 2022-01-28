@@ -12,7 +12,7 @@ def weight_variable_glorot(input_dim, output_dim, name=""):
     #initial = tf.random_uniform([input_dim, output_dim], minval=-init_range,
     #                            maxval=init_range, dtype=tf.float32)
     initial = tf.random.uniform([input_dim, output_dim], minval=-init_range,
-                                maxval=init_range, dtype=tf.float32,seed=6)
+                                maxval=init_range, dtype=tf.float32)    # seed=6
 
 ##    print(input_dim)
 ##    print(output_dim)
