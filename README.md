@@ -1,3 +1,3 @@
 # GRACE
 
-Installation
+# Installation
