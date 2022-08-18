@@ -86,10 +86,10 @@ flags.DEFINE_float('weight_decay', 0., 'Weight for L2 loss on embedding matrix.'
 flags.DEFINE_float('dropout', 0., 'Dropout rate (1 - keep probability).')
 flags.DEFINE_string('model', 'gcn_ae', 'Model string.')       # Choosing model gcn_ae, gcn_vae
 flags.DEFINE_integer('features', 1, 'Whether to use features (1) or not (0).')   # out data features are not binary
-flags.DEFINE_integer('SVM_run', 0, 'Whether to run SVM (1) or not (0)')    
+flags.DEFINE_integer('SVM_run', 1, 'Whether to run SVM (1) or not (0)')    
 flags.DEFINE_integer('WCSS_run', 1, 'Whether to run WCSS (1) or not (0)')   
-flags.DEFINE_integer('sampling_count', 1, 'Number of samples')    # default 20
-flags.DEFINE_integer('repeat_count', 1, 'Number of runs')    # User can get the averages of each performance results through multiple runs
+flags.DEFINE_integer('sampling_count', 20, 'Number of samples')    # default 20
+flags.DEFINE_integer('repeat_count', 10, 'Number of runs')    # User can get the averages of each performance results through multiple runs
 
 
 model_str = FLAGS.model
