@@ -26,11 +26,6 @@ file = pd.read_csv('.../{}.txt'.format(data_file), sep='\t')
 ```
 file_label = pd.read_csv('.../{}_label.txt'.format(data_file), names=['order', 'target'], sep='\t')
 ```
-You can specify a dataset as follows:
-```
-python GRACE.py --dataset usoskin
-```
-
 
 
 ## Run the demo
@@ -38,7 +33,10 @@ python GRACE.py --dataset usoskin
 ```bash
 python GRACE.py
 ```
-
+You can specify a dataset as follows:
+```
+python GRACE.py --dataset usoskin
+```
 
 ## Models
 
