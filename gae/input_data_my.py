@@ -35,37 +35,6 @@ def parse_index_file(filename):
     return index
 
 
-def load_data(dataset):
-    # load the data: x, tx, allx, graph
-    names = ['x', 'tx', 'allx', 'graph']
-    objects = []
-    for i in range(len(names)):
-        with open("data/ind.{}.{}".format(dataset, names[i]), 'rb') as f:
-            if sys.version_info > (3, 0):
-                objects.append(pkl.load(f, encoding='latin1'))
-            else:
-                objects.append(pkl.load(f))
-    x, tx, allx, graph = tuple(objects)
-    test_idx_reorder = parse_index_file("data/ind.{}.test.index".format(dataset))
-    test_idx_range = np.sort(test_idx_reorder)
-
-    if dataset == 'citeseer':
-        # Fix citeseer dataset (there are some isolated nodes in the graph)
-        # Find isolated nodes, add them as zero-vecs into the right position
-        test_idx_range_full = range(min(test_idx_reorder), max(test_idx_reorder)+1)
-        tx_extended = sp.lil_matrix((len(test_idx_range_full), x.shape[1]))
-        tx_extended[test_idx_range-min(test_idx_range), :] = tx
-        tx = tx_extended
-
-    features = sp.vstack((allx, tx)).tolil()
-    features[test_idx_reorder, :] = features[test_idx_range, :]
-    adj = nx.adjacency_matrix(nx.from_dict_of_lists(graph))
-
-    return adj, features
-
-
-
-
 def my_data(data_file, sampling_count):
 
 
@@ -74,8 +43,8 @@ def my_data(data_file, sampling_count):
 
 
 
-    file = pd.read_csv('C:/Users/inu/Desktop/GRACE/GRACE-main/Data/singlecell/{}.txt'.format(data_file), sep='\t')
-    file_label = pd.read_csv('C:/Users/inu/Desktop/GRACE/GRACE-main/Data/singlecell/{}_label.txt'.format(data_file), names=['order', 'target'], sep='\t')
+    file = pd.read_csv('.../{}.txt'.format(data_file), sep='\t')
+    file_label = pd.read_csv('.../{}_label.txt'.format(data_file), names=['order', 'target'], sep='\t')
 
 
 
@@ -148,7 +117,6 @@ def my_data(data_file, sampling_count):
 
 
     for i in range(0, sampling_count):
-        print("1")
         Select_file = Select_file_T.transpose()       
         Sample = Select_file.sample(int(len(Select)*0.7))    
         Sample_T = Sample.transpose()
@@ -288,7 +256,6 @@ def my_data(data_file, sampling_count):
     fig, ax3 = plt.subplots(2, 10, figsize=(20, 5))
     adj_matrs_hier=[]
     for i in range(0, sampling_count):
-        print("1")
         Select_file = Select_file_T.transpose()
         Sample = Select_file.sample(int(len(Select)*0.7))  ########################################## feature Sampling
         Sample_T = Sample.transpose()
