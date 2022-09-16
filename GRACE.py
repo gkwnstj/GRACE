@@ -249,11 +249,6 @@ print("AVERAGE_elbow_kmean_WCSS : ", sum(WCSS)/repeat_count)
 print("Average_time : ", sum(result_time)/repeat_count)
 
 
-CSV_pred = pd.DataFrame(PRED_results)
-CSV_pred_ = CSV_pred.to_csv("pred_gae_{}.csv".format(dataset_str))
-
-
-
 
 
 
