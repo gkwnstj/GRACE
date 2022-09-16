@@ -26,9 +26,9 @@ file = pd.read_csv('.../{}.txt'.format(data_file), sep='\t')
 ```
 file_label = pd.read_csv('.../{}_label.txt'.format(data_file), names=['order', 'target'], sep='\t')
 ```
-Describe the dataset names. Have a look at the names=[''] code (line 120) in 'GRACE.py' (You can examine the multiple datasets)
+You can specify a dataset as follows:
 ```
-names = ['dataset_name']
+python GRACE.py --dataset usoskin
 ```
 
 
