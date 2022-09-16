@@ -34,6 +34,11 @@ file = pd.read_csv('.../{}.txt'.format(data_file), sep='\t')
 ```
 file_label = pd.read_csv('.../{}_label.txt'.format(data_file), names=['order', 'target'], sep='\t')
 ```
+
+Set the route. Have a look at the `svm_m(names, PRED_elbow_kmean)` function in `support_vector_machine.py`
+```
+svm_file = pd.read_csv('.../Norm_data_Umap/Norm_data_{}.txt'.format(names), sep='\t')
+```
 You can adjust a data(single-cell RNA seqeuncing datasets) as follows:
 ```
 python GRACE.py --dataset usoskin
