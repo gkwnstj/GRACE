@@ -17,6 +17,14 @@ python setup.py install
 * pip install umap-learn
 
 
+
+
+## Run the demo
+
+```bash
+python GRACE.py
+```
+
 ## Data
 
 Set the root. Have a look at the `my_data(data_file)` function in `input_data_my.py`
@@ -25,13 +33,6 @@ file = pd.read_csv('.../{}.txt'.format(data_file), sep='\t')
 ```
 ```
 file_label = pd.read_csv('.../{}_label.txt'.format(data_file), names=['order', 'target'], sep='\t')
-```
-
-
-## Run the demo
-
-```bash
-python GRACE.py
 ```
 You can specify a dataset as follows:
 ```
