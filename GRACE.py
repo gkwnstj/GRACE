@@ -44,6 +44,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = ""
 tf.compat.v1.disable_eager_execution()
 warnings.filterwarnings(action='ignore')
 
+print("gpu available : ", tf.test.is_built_with_cuda())
 
 result1 = []
 result2 = []
