@@ -4,7 +4,9 @@
 
 ```bash
 python setup.py install
+* After installation, change form numpy == 1.19.2 to numpy in  ../gae.egg-info/requires.txt
 ```
+
 
 ## Requirements (automatically installed by installation)
 * TensorFlow (1.0 or later)
