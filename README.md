@@ -10,7 +10,7 @@ python setup.py install
 
 ## Requirements (automatically installed by installation)
 * TensorFlow (1.0 or later)
-* python 3.8.12
+* python 3.8.15
 * networkx
 * scikit-learn
 * scipy
@@ -18,6 +18,11 @@ python setup.py install
 ## Extra Requirements
 * pip install umap-learn
 
+## conda 
+```bash
+conda create -n GRACE python=3.8.15 pip
+conda activate GRACE
+```
 
 
 
