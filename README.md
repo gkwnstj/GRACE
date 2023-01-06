@@ -22,6 +22,7 @@ python setup.py install
 ```bash
 conda create -n GRACE python=3.8.15 pip
 conda activate GRACE
+conda install -c anaconda tensorflow-gpu==2.6.0
 ```
 
 
