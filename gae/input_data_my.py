@@ -424,7 +424,8 @@ def my_data(data_file, sampling_count):
     
 ##    G = nx.from_numpy_matrix(A)
     G = nx.Graph(A)
-    adj = nx.adjacency_matrix(G)
+##    adj = nx.adjacency_matrix(G)
+    adj = nx.to_numpy_matrix(G)
 
 
     
