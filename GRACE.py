@@ -40,7 +40,7 @@ import warnings
 import argparse
 import sys
 
-os.environ['CUDA_VISIBLE_DEVICES'] = ""
+os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 tf.compat.v1.disable_eager_execution()
 warnings.filterwarnings(action='ignore')
 
