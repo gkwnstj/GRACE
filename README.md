@@ -4,7 +4,7 @@
 
 ```bash
 python setup.py install
-* After installation, change form numpy == 1.19.2 to numpy in  ../gae.egg-info/requires.txt
+* After installation, change form numpy == 1.19.2 to numpy in  ../gae.egg-info/requires.txt (remove '==1.19.2')
 ```
 
 
