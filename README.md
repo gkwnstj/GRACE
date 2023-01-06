@@ -17,6 +17,7 @@ python setup.py install
 
 ## Extra Requirements
 * pip install umap-learn
+* pip install scipy==1.8.0
 
 ## conda 
 ```bash
