@@ -80,6 +80,7 @@ def my_data(data_file, sampling_count):
     file2 = normalized_array
     T = pd.DataFrame(file2, columns=list(file.index))
     T1 = T.transpose()  ###normalized data
+    normalized_data = T1
 
     ###Variance
     file3 = file2.transpose()
@@ -100,8 +101,8 @@ def my_data(data_file, sampling_count):
 
 
 
-    reducer = umap.UMAP()
-    points_for_WCSS = reducer.fit_transform(T1.transpose())
+    #reducer = umap.UMAP()
+    #points_for_WCSS = reducer.fit_transform(T1.transpose())
 
 
     tsne = TSNE(n_components=2, learning_rate = 200, init = 'pca')
@@ -443,7 +444,7 @@ def my_data(data_file, sampling_count):
 
 
 
-    return adj, features, n_clusters, true_label, points_for_WCSS
+    return adj, features, n_clusters, true_label, normalized_data
 
 
 
