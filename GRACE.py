@@ -102,7 +102,7 @@ for j in range(0,repeat_count):
 
 
     # Load data
-    adj, features, n_clusters, true_label, points_for_WCSS = my_data(dataset_str, sampling_count)
+    adj, features, n_clusters, true_label, normalized_data = my_data(dataset_str, sampling_count)
     
     # Store original adjacency matrix (without diagonal entries) for later
     adj_orig = adj
@@ -229,6 +229,10 @@ for j in range(0,repeat_count):
     ############################################   WCSS     ##############################################
 
     if WCSS_run == 1:
+        
+        reducer = umap.UMAP()
+        
+        points_for_WCSS = reducer.fit_transform(normalized_data.transpose())
         
         WCSSresult = wcss_by_cluster(points_for_WCSS, PRED_elbow_kmean)
 
