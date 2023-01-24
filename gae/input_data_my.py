@@ -246,6 +246,8 @@ def my_data(data_file, sampling_count):
             adj_matr_kmean.at[k[1], k[0]] = 1
 
         adj_matrs_kmean.append(adj_matr_kmean)
+        
+        del adj_matr_kmean
 
 
 
@@ -385,6 +387,8 @@ def my_data(data_file, sampling_count):
 
         
         adj_matrs_hier.append(adj_matr_hier)
+        
+        del adj_matr_hier
 
        
         
@@ -398,6 +402,8 @@ def my_data(data_file, sampling_count):
     plt.close('all')
 
     A = np.array(adj_matrs)
+    
+    del adj_matrs
 
 
 ##    print(A)
@@ -427,6 +433,8 @@ def my_data(data_file, sampling_count):
 ##    adj = nx.to_numpy_matrix(G)
     G = nx.Graph(A)
     adj = nx.adjacency_matrix(G)
+    
+    del G
 
 
 
@@ -439,6 +447,26 @@ def my_data(data_file, sampling_count):
 
 
     n_clusters = len(file_label['target'].unique())
+    
+    del file
+    del file_label
+    del X6
+    del X7
+    del X8
+    del normalized_array
+    del file2
+    del T
+    del T1
+    del file3
+    del variance
+    del variance1
+    del pd_variance
+    del Sort
+    del Select
+    del file1
+    del Select_file_T
+    del densed_file
+    del features_np
 
 
 
