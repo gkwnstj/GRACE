@@ -237,6 +237,15 @@ for j in range(0,repeat_count):
         WCSSresult = wcss_by_cluster(points_for_WCSS, PRED_elbow_kmean)
 
         WCSS.append(WCSSresult)
+        
+    del normalized_data
+    del adj
+    del features
+    del n_clusters
+    del true_label
+    del adj_orig
+    del adj_train
+
 
 
 print("#################################################################################################")
