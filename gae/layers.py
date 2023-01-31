@@ -105,7 +105,12 @@ class GraphConvolutionSparse(Layer):
         x = inputs
         x = dropout_sparse(x, 1-self.dropout, self.features_nonzero)
         x = tf.sparse_tensor_dense_matmul(x, self.vars['weights'])
-        x = tf.sparse_tensor_dense_matmul(self.adj, x)
+        
+        #x = tf.sparse_tensor_dense_matmul(self.adj, x)
+        adj = tf.sparse.reorder(self.adj)
+        adj = tf.sparse_tensor_to_dense(adj)
+        x = tf.matmul(adj,x, a_is_sparse = True)
+        
         outputs = self.act(x)
         #print(outputs)
         return outputs
