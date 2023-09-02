@@ -66,10 +66,14 @@ You can choose between the following models:
 Please cite our paper if you use this code in your own work:
 
 ```
-@article{},
-  title={},
-  author={},
-  journal={},
-  year={}
+@article{ha2023grace,
+  title={GRACE: Graph autoencoder based single-cell clustering through ensemble similarity learning},
+  author={Ha, Jun Seo and Jeong, Hyundoo},
+  journal={Plos one},
+  volume={18},
+  number={4},
+  pages={e0284527},
+  year={2023},
+  publisher={Public Library of Science San Francisco, CA USA}
 }
 ```
